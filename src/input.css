@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.anime{
+    animation: anime linear forwards 1.5s ;
+    animation-delay: 1s;
+}
+._remove{
+animation: _remove linear forwards .8s ;
+animation-delay: .7s;
+text-decoration: none;
+}
+.stop{
+    animation: stop forwards linear 1.8s;
+}
+@keyframes stop{
+    0%{transform: translateY(100px)}
+    50%{transform: translateY(-50px)}
+    100%{transform: translateY(0px)}
+}
+@keyframes _remove{
+    100%{opacity: 0;
+        scale: 0;
+    }
+}
+@keyframes anime {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+        z-index: 100;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* //////////////////////js css///////////////// */
+.list{
+     width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin: 10px 0px;
+    color: rgb(86, 86, 86);
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+ 
+    >div{
+        display: flex;
+        gap: 5px;
+    }
+    
+}
+.changing{
+    display: flex;
+}
+
+/* .checked{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+&::before{
+    content: '';
+   background-image: url(imgs/icons8-sad-32.png);
+   background-position: center;
+   background-size: cover;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute ;
+    left: -30px;
+    transform: scale(0) rotateZ('180deg');
+    transition: .4s;
+    
+
+
+    
+}
+&::after{
+    content: '';
+background-image: url(imgs/icons8-smile-beam-32.png);
+background-position: center;
+background-size: cover;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+position: absolute ;
+left: -30px;
+
+}
+#checkboxx{
+    display: none;
+   
+}
+input[type="checkbox"]:checked + .checked::before{
+    transform:scale(1) rotateZ('0deg');
+} */
+
+
